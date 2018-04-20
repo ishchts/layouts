@@ -1,0 +1,463 @@
+@import "_varibles.scss";
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+html {
+	height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px PTSansRegular, sans-serif;
+	height: 100%;
+}
+.container-fluid{
+	max-width: 960px;
+	margin: 0 auto;
+}
+.wrapper {
+	min-width: 280px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	min-height: 741px;
+	background: $yellow;
+	position: relative;
+}
+.topHeader{
+	font-family: "PTSansBold";
+	padding-top: 55px;
+	margin-bottom: 35px;
+	&__logo{
+		font-size: 30px;
+		color: $black;
+		font-size: 30px;
+		padding-top: 10px;
+		padding-left: 62px;
+		line-height: 30px;
+		padding-bottom: 10px;
+		background-image: url(../images/imprint.png);
+		background-repeat: no-repeat;
+		background-position: 8px 5px;
+	}
+	&__nav{
+		padding: 10px 0;		
+		ul{
+			float: right;
+			li{
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 4px;
+				margin-left: 66px;
+				a{
+					display: inline-block;
+					color: #010101;
+					font-size: 22px;
+					line-height: 30px;
+					vertical-align: top;
+					font-family: 'HelveticaNeue-Bold';
+					padding: 4px 0;
+					letter-spacing: -1px;
+					&:hover,&:focus{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+.slider{
+	margin-bottom: 106px;
+	&__item{		
+		outline: none;		
+		&Content{
+			padding-top: 84px;
+			padding-right: 65px;
+			h3{
+				color: $black;
+				line-height: 32px;
+				font-size: 32px;
+				font-family: "PTSansBold";
+				margin-bottom: 21px;
+			}
+			p{
+				font-family: "PTSansRegular";
+				font-size: 20px;
+				line-height: 24px;
+				margin-bottom: 19px;
+			}
+			span{
+				font-family: "PTSansRegular";
+				font-size: 16px;
+				line-height: 19px;
+			}
+		}
+		&Btn {
+			margin-top: 38px;
+			margin-left: -2px;
+			a {
+				display: inline-block;
+				margin-right: 35px;
+				&:focus,&:hover{
+					text-decoration: none;
+					outline: none;
+					border: none;
+				}
+				i.fa {
+					outline: none;
+					border: none;
+					font-size: 42px;
+					color: $black;			
+					&:focus{
+						outline: none;
+						border: none;
+					}
+				}
+				}
+
+		}
+		&Photo{
+			padding-left: 80px;
+			padding-top: 16px;
+			div{
+				width: 316px;
+				min-height: 470px;
+				background: #000;
+				margin: 0 auto;
+				border: 44px solid #fff;
+				border-left-width: 14px;
+				border-right-width: 14px;
+				-webkit-border-top-right-radius: 22px;
+				-moz-border-radius-topright: 22px;
+				border-top-right-radius: 22px;
+				-webkit-border-top-left-radius: 22px;
+				-moz-border-radius-topleft: 22px;
+				border-top-left-radius: 22px;
+				-webkit-border-bottom-right-radius: 22px;
+				-moz-border-radius-bottomright: 22px;
+				border-bottom-right-radius: 22px;
+				-webkit-border-bottom-left-radius: 22px;
+				-moz-border-radius-bottomleft: 22px;
+				border-bottom-left-radius: 22px;
+				position: relative;
+				&::after,&::before{
+					content:"";
+					position: absolute;
+					height: 27px;
+					width: 2px;
+					background-color: #fff;
+					right: -15px;
+					top: 35px;
+					margin: auto;
+				}
+				&::after{
+					top: 66px;
+				}
+				p{
+					color: #fcdb00;
+					font-size: 30px;
+					line-height: 30px;
+					font-family: "PTSansBold";
+					margin-top: 52%;
+					margin-left: 60px;
+					padding-left: 62px;
+					padding-top: 8px;
+					padding-bottom: 8px;
+					background-image: url(../images/imprintYewllow.png);
+					background-repeat: no-repeat;
+					background-position: 10px 3px;
+				}
+			}
+
+		}
+	}
+	.slick-dots{
+		bottom: -57px;
+		width: 98%;
+		li{
+			width: 14px;
+			height: 14px;
+			margin: 0 4px;
+			button{
+				width: 14px;
+				height: 14px;
+				&::before{
+					width: 14px;
+					height: 14px;
+					background-color: #fff;
+					border-radius: 50%;
+					content:"";
+				}
+			}
+		}
+		}
+
+}
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+	padding: 0 0 765px;
+}
+.features{
+	padding-top: 109px;
+	padding-bottom: 87px;
+	h2{
+		font-size: 32px;
+		line-height: 42px;
+		font-family: "PTSansBold";
+		color: $black;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	&__description {
+		font-family: "PTSansRegular";
+		font-size: 20px;
+		line-height: 24px;
+		padding-left: 70px;
+		padding-right: 70px;
+		margin-bottom: 80px;
+		color: $black;
+		text-align: center;
+	}
+	&__list{
+		float: left;
+		width: 100%;
+	}
+	&__item{
+		float: left;
+		display: inline-block;
+		vertical-align: top;
+		width: 300px;
+		box-sizing: border-box;
+		padding-left: 81px;
+		padding-top: 7px;
+		margin-right: 18px;
+		margin-bottom: 76px;
+		position: relative;
+		&::before{
+			content: "\f0e0";
+			position: absolute;
+			font: normal normal normal 14px/1 FontAwesome;
+			left: 15px;
+			font-size: 31px;
+			top: 3px;
+		}
+		&:nth-child(3n){
+			margin-right: 0;
+		}
+		p{
+			font-size: 22px;
+			font-family: "PTSansBold";
+			line-height: 22px;
+			margin-bottom: 13px;
+		}
+		span{
+			color: $gray;
+			font-size: 16px;
+			font-family: "PTSansRegular";
+
+		}
+	}
+}
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	margin: -765px auto 0;
+	min-width: 280px;
+	min-height: 765px;
+	position: relative;
+	background-color: $black;
+}
+.footer{
+	padding-top: 87px;
+	padding-bottom: 87px;
+	h2{
+		font-size: 32px;
+		line-height: 42px;
+		font-family: "PTSansBold";
+		color: $yellow;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	&__description {
+		font-family: "PTSansRegular";
+		font-size: 20px;
+		line-height: 24px;
+		padding-left: 110px ;
+		padding-right: 110px;
+		margin-bottom: 40px;
+		color: $gray;
+		text-align: center;
+	}
+	&__form{
+		padding-left: 113px;
+		padding-right: 112px;
+		input{
+			color: $gray;
+			font-size: 16px;
+			font-family: "PTSansRegular";
+			outline: none;
+			width: 79%;
+			padding-top: 14px;
+			padding-left: 23px;
+			padding-bottom: 16px;
+			border: 1px solid #fff;
+			border-radius: 5px;
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 18px;
+			&:placeholder{
+				color:$gray;
+			}
+	
+		}
+		button{
+			display: inline-block;
+			vertical-align: top;
+			background-color: $yellow;
+			font-family: "PTSansBold";
+			font-size: 16px;
+			text-transform: uppercase;
+			padding: 15px 34px;
+			border-color: $yellow;
+			outline: none;
+			border-radius: 6px;
+		}
+	}
+	&__social{
+		text-align: center;
+		margin-top: 77px;
+		padding-right: 27px;
+		a{
+			text-decoration: none;
+			display: inline-block;
+			width: 36px;
+			height: 36px;
+			background-color: $yellow;
+			border-radius: 7px;
+			margin-right: 28px;
+			transition: all .3s ease;
+			&:hover{
+				background-color:$gray;
+			}
+			&:hover i{
+				color: $yellow;
+			}
+			i{
+				font-size: 32px;
+				vertical-align: top;
+				color: $black;
+				transition: all .3s ease;
+			}
+			.fa-facebook{
+				padding-top: 4px;
+				padding-left: 10px;
+			}
+			.fa-twitter{
+				padding-top: 3px;
+				padding-left: 1px;
+			}
+			.fa-google-plus-official{
+				padding-top: 3px;
+			}
+			.fa-pinterest-p{
+				padding-top: 7px;
+				padding-left: 5px;
+			}
+		}
+	}
+	&__bottom{
+		margin-top: 120px;
+	}
+	&__address,&__linksList{
+		display: inline-block;
+		vertical-align: top;
+	}
+	&__address{
+		width: 25%;
+		padding-left: 23px;
+		padding-top: 11px;
+		padding-right: 30px;
+		p,a{
+			color: $gray;
+			font-size: 16px;
+		}
+		p{
+			line-height: 20px;
+		}
+		a {
+			display: block;
+			line-height: 27px;
+		}
+	}
+	&__linksList{
+		width: 67%;
+		margin-left: 7%;
+	}
+	&__linksItem{
+		display: inline-block;
+		vertical-align: top;
+		width: 140px;
+		padding-top: 10px;
+		padding-left: 17px;
+		margin-right: 18px;
+		a{
+			display: block;
+			font-size: 16px;
+			color: $gray;
+			line-height: 20px;
+		}
+	}
+}

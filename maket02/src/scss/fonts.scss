@@ -1,0 +1,39 @@
+@font-face {
+		font-family: "PTSansRegular";
+		src: url("../fonts/PTSansRegular/PTSansRegular.eot");
+		src: url("../fonts/PTSansRegular/PTSansRegular.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/PTSansRegular/PTSansRegular.woff") format("woff"),
+		url("../fonts/PTSansRegular/PTSansRegular.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+@font-face {
+		font-family: "PTSansBold";
+		src: url("../fonts/PTSansBold/PTSansBold.eot");
+		src: url("../fonts/PTSansBold/PTSansBold.eot?#iefix")format("embedded-opentype"),
+		url("../fonts/PTSansBold/PTSansBold.woff") format("woff"),
+		url("../fonts/PTSansBold/PTSansBold.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('../fonts/FontAwesome/fontawesome-webfont.eot?v=4.7.0');
+	src: url('../fonts/FontAwesome/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+		url('../fonts/FontAwesome/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+		url('../fonts/FontAwesome/fontawesome-webfont.woff?v=4.7.0') format('woff'),
+		url('../fonts/FontAwesome/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), 
+		url('../fonts/FontAwesome/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'HelveticaNeue-Bold';
+	src: url('../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.eot?v=4.7.0');
+	src: url('../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+		url('../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.woff?v=4.7.0') format('woff'),
+		url('../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.ttf?v=4.7.0') format('truetype'), 
+		url('../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.svg?v=4.7.0#fontawesomeregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -1,0 +1,795 @@
+@import "_varibles.scss";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+
+html {
+	height: 100%;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+body {
+	font: 12px/18px LatoRegular,Arial, sans-serif;
+	height: 100%;
+}
+.wrapper {
+	min-width: 280px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+
+}
+.container-fluid{
+	max-width: 1250px;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+	&:focus,&:hover{
+		text-decoration: none;
+		
+	}
+}
+h1{
+	font-family: "YesevaOneRegular";
+	font-size: 90px;
+	color: #fff;
+	line-height: 119px;
+
+}
+h5{
+	font-family: "YesevaOneRegular";
+	font-size: 36px;
+	color: $gold;
+	line-height: 40px;
+}
+h6{
+	font-family: "YesevaOneRegular";
+	font-size: 36px;
+	color: #fff;
+	line-height: 40px;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+	min-height: 750px;
+	background: #FFE680;
+	background-image: url('../images/headerBg.jpg');
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;	
+	&::before{
+		content:"";
+		background-image: url(../images/topBg.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		width: 100%;
+  		height: 159px;
+		margin: auto;
+		left: 0;
+		top: 0;		
+	}
+	&__intro{
+		margin-top: 112px;
+		padding-left: 17px;
+		text-align: center;
+	}
+	&__btnMenu{
+		padding-top: 50px;
+		background-image: url(../images/decoration.png);
+		background-repeat: no-repeat;
+		background-position: 173px top;
+		max-width: 570px;
+		margin: 0 auto;
+		margin-top: 22px;
+	}
+	&__btnBooking,&__btnView {
+		font-family: "LatoRegular";
+		font-size: 18px;
+		line-height: 21px;
+		text-transform: uppercase;
+		display: inline-block;
+		margin: 0 13px;
+		margin-top: 27px;
+		padding: 20px 0;
+		padding-bottom: 14px;
+		vertical-align: top;
+		
+	}
+	&__btnBooking{
+		color: #fff;
+		border-width: 1px;
+		border-color: rgb(0, 0, 0);
+		border-style: solid;
+		background-color: rgba(0, 0, 0, 0.702);
+		opacity: 0.8;
+		width: 228px;
+		position: relative;
+		box-sizing: border-box;
+		span{
+			position: relative;
+			z-index: 100;
+		}
+		&::after{
+			content:"";
+			position: absolute;			
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			width: 0;
+			background-color: tranparent;
+			left: 0;
+			transition: all .3s ease;
+		}
+		&:hover{
+			color: #fff;
+		}
+		&:hover::after{
+			left: 0;			
+			background-color: $gold;
+			width: 100%;
+		}
+
+	}
+	&__btnView{
+		color: #fff;
+		border-width: 1px;
+		border-color: rgb(255, 255, 255);
+		border-style: solid;
+		background-color: rgba(255, 255, 255, 0.278);
+		opacity: 0.702;
+		width: 228px;
+		transition: all .6s ease;
+		overflow: hidden;
+		position: relative;
+		
+		.insider {
+			background-color:#fff;
+			width:50%;
+			height:20px;
+			position:absolute;
+			left:-135px;
+			transform: rotate(-45deg);
+		}
+		&:hover{
+			color: #fff;
+			.insider {
+				transition: all 0.6s ease;
+				left:235px;
+			}
+		}
+	}
+
+}
+.topHeader{
+	&__logo{
+		font-family: "YesevaOneRegular";
+		font-size: 36px;
+		color: #fff;
+		text-transform: uppercase;
+		line-height: 40px;
+		display: inline-block;
+		padding-left: 0;
+		padding-top: 42px;
+		padding-bottom: 20px;
+		margin-left: -10px;
+		background-image: url(../images/Logo2.png);
+		background-repeat: no-repeat;
+		background-position: 17px 8px;
+	}
+	&Menu{
+		list-style-type: none;
+		padding: 0;
+		padding-left: 78px;
+		&__item{
+			display: inline-block;
+			padding-right: 26px;
+			vertical-align: top;				
+			&:last-child{
+				padding-right: 0;
+			}
+		}
+		&__link{
+			display: inline-block;
+			font-size: 21px;
+			line-height: 21px;
+			color: #fff;
+			padding-top: 52px;
+			font-family: 'GentiumBookBasic', arial;
+			padding-left: 13px;
+			padding-right: 13px;
+			position: relative;
+			transition: all .3s ease;
+			&--current{
+				&::before{
+					content:"";
+					position: absolute;
+					width: 100%;
+					margin: auto;
+					margin: 0;
+					right: 0;
+					top: 0;
+					background-color: #fff;
+					height: 3px;
+				}
+			}
+		}
+	}
+	&__social{
+		padding: 0;
+		padding-top: 44px;
+		position: relative;
+		left: 8px;
+		&Link{
+			display: inline-block;
+			vertical-align: top;
+			width: auto;
+			height: 30px;
+			margin-right: 14px;
+			position: relative;
+			&::after{
+				font-family: 'FontAwesome';
+				color: $gold;
+				font-size: 20px;
+				display: inline-block;
+				padding-top: 8px;
+			}
+			&--tw{
+				&::after{
+					content: '\f099';
+				}
+
+			}
+			&--yt{
+				&::after{
+					content: '\f167';
+				}
+			}
+			&--fb{
+				&::after{
+					content: '\f09a ';
+				}
+			}
+
+		}
+	}
+}
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+	padding: 0 0 320px;
+}
+.about{
+	background-image: url(../images/aboutBg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	&Columns{
+		padding-top: 100px;
+		padding-left: 23px;
+		padding-bottom: 109px;
+		background-image: url(../images/dish.png);
+		background-repeat: no-repeat;
+		background-position: 565px 55px;		
+		&__left{
+			text-align: center;
+			padding: 0 90px;
+			padding-top: 2px;
+			h5{
+				padding-bottom: 38px;
+				background-image: url(../images/divinder.png);
+				background-repeat: no-repeat;
+				background-position: center bottom;
+				margin-bottom: 27px;
+				
+			}
+			
+		}
+		&__text{
+			font-size: 16px;
+			color: $black;
+			line-height: 24px;
+			letter-spacing: -0.1px;
+			padding-bottom: 20px;
+		}
+		&__signature{
+			padding-left: 69px;
+			padding-top: 28px;
+		}
+	}
+
+	
+}
+.ingredients{
+	background-image: url(../images/ingredientsBg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 758px;
+	&__row{
+		text-align: right;
+		padding-top: 100px;
+	}
+	&__right{
+		border-width: 0.06px;
+		border-color: #1c1e1c;
+		border-style: solid;
+		background-color: rgb(0, 0, 0);
+		opacity: 0.671;
+		width: 570px;
+		float: right;
+		text-align: center;
+		margin-right: 24px;
+		box-sizing: border-box;
+		padding: 0 70px;
+		padding-bottom: 53px;
+		h6{
+			margin-top: 77px;
+			padding-bottom: 40px;
+			background-image: url(../images/divinderWhite.png);
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			margin-bottom: 20px;
+			
+		}
+	}
+	&__text{
+		color: #fff;
+		font-size: 16px;
+		letter-spacing: -0.1px;
+		line-height: 24px;
+		padding-top: 5px;
+		margin-bottom: 67px;
+	}
+	&__photo{
+		margin-bottom: 20px;
+		figure{
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 13px;
+		}
+	}
+}
+.carte{
+	background-image: url(../images/menuBg.png);
+	background-size: cover;
+	&__row{
+		padding-top: 101px;
+		padding-left: 17px;
+		padding-right: 17px;
+		padding-bottom: 33px;
+	}
+	&__columnLeft{
+		text-align: center;
+		padding: 0;
+		padding-left: 8px;
+	}
+	&__columnRight{
+		text-align: center;
+		padding-left: 0;
+		padding-right: 7px;
+	}
+	&__item{
+		padding: 0 74px;
+		padding-bottom: 32px;
+		h5{
+			padding-bottom: 39px;
+			background-image: url(../images/divinder.png);
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			margin-bottom: 25px;
+		}
+	}
+	&__list{
+		
+	}
+	&__listItem{
+		margin-bottom: 21px;
+		padding: 0 10px;
+		padding-bottom: 7px;
+		padding-top: 1px;
+		position: relative;
+		
+		&--special{
+			outline: 1px solid $gold; 
+			&::after{
+				content:"Special";
+				position: absolute;
+				right: -1px;
+				font-family: "LatoRegular";
+				font-size: 14px;
+				color: #fff;
+				background-color: $gold;
+				top: -25px;
+				padding: 3px 13px;
+				padding-bottom: 3px;
+
+			}
+		}
+	}
+	&__name{
+		font-family: "YesevaOneRegular";
+		font-size: 21px;
+		color: $gold;
+		text-align: left;
+		line-height: 30px;
+		padding-right: 100px;
+		position: relative;
+		padding-bottom: 5px;
+		padding-top: 1px;
+		margin-bottom: 9px;
+		&::after{
+			content:"";
+			position: absolute;
+			width: 100%;
+			margin: auto;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 1px;
+			background-color: $gold;
+		}
+	}
+	&__price{
+		position: absolute;
+		right: 0;
+	}
+	&__description{
+		font-size: 16px;
+		text-align: left;
+		line-height: 24px;
+	}
+}
+.reviews{
+	background-image: url(../images/reviewsBg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 758px;
+	&__row{
+		text-align: center;
+		padding-top: 100px;
+	}
+	&__item{
+		border: 1px solid #000;
+		background-color: rgba(0, 0, 0, .6);
+		width: 770px;
+		min-height: 557px;
+		text-align: center;
+		margin: 0 auto;
+		padding-top: 77px;
+		
+		h6{
+			padding-bottom: 39px;
+			background-image: url(../images/divinderWhite.png);
+			background-repeat: no-repeat;
+			background-position: center bottom;
+			color: #fff;			
+		}
+		&Text{
+			font-family: "GentiumBookBasic";
+			font-size: 25px;
+			color: #fff;
+			margin-top: 21px;
+			padding: 0 70px;
+			letter-spacing: 0.8px;
+			line-height: 45px;
+
+		}
+		&Author{
+			color: #fff;
+			font-family: "LatoRegular";
+			font-size: 18px;
+			margin-top: 21px;
+			letter-spacing: 0;
+		}
+	}
+}
+.reservations{
+	background-image: url(../images/aboutBg.png);
+	min-height: 710px;
+	&__row{
+		padding-top: 100px;
+	}
+	&__column{
+		&Left{
+			padding: 0;
+			figure{
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 1px;
+				margin-left: 26px;
+				
+			}
+		}
+		&Right{
+			text-align: center;
+			padding: 0 80px;
+			padding-right: 87px;
+			h5{
+				padding-bottom: 42px;
+				background-image: url(../images/divinder.png);
+				background-repeat: no-repeat;
+				background-position: center bottom;
+				line-height: 34px;
+				padding-right: 6px;
+				margin-bottom: 27px;
+			}
+		}
+		&Text{
+			color: $black;
+			font-size: 16px;
+			line-height: 24px;
+			padding: 0 5px;
+			letter-spacing: -0.1px;
+			margin-bottom: 10px;
+		}
+	}
+	&__form{
+		margin-top: 35px;
+		padding: 0 6px;
+		text-align: -webkit-auto;
+		.help-block.form-error{
+			position: absolute;
+			color: red;
+		}
+		&Group{
+			position: relative;
+			text-align: left;
+			display: inline-block;
+			vertical-align: top;
+			width: 200px;
+			margin-right: 27px;
+			padding-bottom: 21px;
+			&:nth-child(2n){
+				margin-right: 0;
+			}
+		}
+		&Name{
+			display: block;
+			color: $gold;
+			font-size: 14px;
+			font-family: "OpenSansBold";
+			padding: 3px 0;
+			padding-bottom: 6px;
+
+		}
+		input[type="text"]{
+			display: block;
+			width: 100%;
+			font-family: "OpenSansItalic";
+			font-size: 16px;
+			outline: none;
+			border: 1px solid #c8c6c6;
+			padding: 8px 15px;
+			padding-right: 35px;
+			transition: all .3s ease;
+			cursor: pointer;
+			
+			&:focus{
+				border-color: $gold;
+			}
+			&:hover{
+				border-color: $gold;
+			}			
+			&::placeholder{
+				color: #8c8c8c;
+			}
+
+		}
+		&InputWithBtn{
+			position: relative;
+		}
+		&BtnDate{
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: 7px;
+			right: 5px;
+			margin: auto;
+			&::after{
+				content: '\f073 ';
+  				font-family: 'FontAwesome';
+				color: #7c7c7c;
+				font-size: 14px;
+				transition: all .3s;
+
+			}
+			&:hover::after{
+				color: $gold;
+			}
+		}
+		.SumoSelect > .CaptionCont:focus{
+			outline-color: $gold;
+		}
+		.SumoSelect:focus > .CaptionCont, .SumoSelect > .CaptionCont{
+			transition: all .3s ease;
+		}
+		.SumoSelect:focus > .CaptionCont, .SumoSelect:hover > .CaptionCont{
+			border-color: $gold;
+		}
+		.SumoSelect > .CaptionCont{
+			font-family: "OpenSansItalic";
+			font-size: 16px;
+			color: #7c7c7c;
+			padding-left: 15px;
+			padding-top: 7px;
+			padding-bottom: 9px;
+		}
+		.SumoSelect > .optWrapper.open{
+			top: 36px;
+			font-family: "OpenSansItalic";
+			font-size: 16px;
+			padding-left: 15px;
+			box-sizing: border-box;
+			width: 200px!important;
+
+		}
+		.options li {
+			color: #7c7c7c;
+			margin-bottom: 15px;
+		}
+		button{
+			border-width: 1px;
+			border-color: rgb(200, 159, 45);
+			border-style: solid;
+			background-color: rgba(200, 159, 45, 0.98);
+			width: 200px;
+			display: block;
+			margin: 0 auto;
+			color: #fff;
+			font-family: "OpenSansRegular";
+			font-size: 16px;
+			outline: none;
+			padding: 8px;
+			margin-top: 11px;
+
+		}
+	}
+
+}
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+	margin: -320px auto 0;
+	min-width: 280px;
+	min-height: 320px;
+	position: relative;
+	background-color: #191919;
+	font-family: "OpenSansRegular";
+	padding-top: 50px;
+	h6{
+		font-size: 21px;
+		padding-bottom: 27px;
+		background-image: url(../images/divinderWhite.png);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		text-align: center;
+		background-size: 196px 21px;
+		margin-bottom: 17px;
+		
+		
+	}
+	.strong{
+		font-family: "OpenSansBold";
+		
+	}
+	&AboutUs{
+		text-align: center;
+		padding-left: 51px;
+		&__text{
+			color: #f0f0f0;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		
+	}
+	&Opening{
+		text-align: center;
+		padding-left: 20px;
+		&__list{
+			margin-bottom: 50px;
+		}
+		&__item{
+			color: #f0f0f0;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		&__links{
+			padding-left: 7px;
+		}
+		&__link{
+			display: inline-block;
+			vertical-align: top;
+			
+			width: 21px;
+			height: 15px;
+			margin: 0 4px;
+			border-radius:1px;
+			position: relative;
+			font-size: 16px;
+			i{
+				background-color: #282828;
+				color: #fff;
+				transition: all .3s ease;
+			}
+			&:hover i{
+				background-color: #fff;
+				color: #282828;
+			}
+		}
+		
+	}
+	&Location{
+		text-align: center;
+		padding-right: 43px;
+		&__item{
+			font-family: "OpenSansBold";
+			font-size: 16px;
+			color: #f0f0f0;
+			line-height: 24px;
+
+		}
+		&__social{
+			margin-top: 50px;
+			&Link{
+				display: inline-block;
+				font-size: 16px;
+				vertical-align: top;
+				padding: 0 4px;
+				color: #fff;
+				transition: all .3s ease;
+				i{
+					transition: all .3s ease;
+				}
+				&:hover i{
+					color: $gold;
+				}
+			}
+		}
+	}
+
+
+}
